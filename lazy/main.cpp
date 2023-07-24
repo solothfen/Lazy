@@ -15,10 +15,17 @@ int main()
         p1+=x1;
         p2+=x2;
         p3+=x3;
+        if(x1 != x2 + x3){
+            cout << "错了，重输" << endl;
+            p1-=x1;
+            p2-=x2;
+            p3-=x3;
+            n++;
+        }
     }
     cout << "计算机科学与工程学院" << mon << "月" << day << "日情况汇报：" << endl;
     cout << "应在校"<< p1 << "人" << endl;
     cout << "实在校"<< p2 << "人" << endl;
-    cout << p3 << "人因实习，回家等原因暂时离校" << endl;
+    cout << p3 << "人因回家等原因暂时离校" << endl;
     return 0;
 }
